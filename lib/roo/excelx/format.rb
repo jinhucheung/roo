@@ -6,7 +6,8 @@ module Roo
       extend self
       EXCEPTIONAL_FORMATS = {
         'h:mm am/pm' => :date,
-        'h:mm:ss am/pm' => :date
+        'h:mm:ss am/pm' => :date,
+        'm/d/yyyy' => :date
       }
 
       STANDARD_FORMATS = {
@@ -37,7 +38,8 @@ module Roo
         46 => '[h]:mm:ss',
         47 => 'mmss.0',
         48 => '##0.0E+0',
-        49 => '@'
+        49 => '@',
+        58 => 'm/d/yyyy'
       }
 
       def to_type(format)
